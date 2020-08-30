@@ -11,6 +11,8 @@ The user is identified by the email.
 ## Setup
 ```
 python3 -m venv venv
+. venv/bin/activate
+
 pip3 install -r requirements.txt
 cp instance/config{_sample,}.py
 ```
