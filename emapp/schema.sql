@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS signup;
+DROP TABLE IF EXISTS event;
+
+CREATE TABLE event (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  start_time TIMESTAMP NOT NULL, -- UTC
+  end_time TIMESTAMP NOT NULL, -- UTC
+  location TEXT NOT NULL
+);
+
+CREATE TABLE signup (
+  email TEXT PRIMARY KEY,
+  event_id INTEGER NOT NULL,
+  FOREIGN KEY (event_id) REFERENCES event (id)
+);
