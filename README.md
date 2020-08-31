@@ -19,6 +19,7 @@ cp instance/config{_sample,}.py
 
 ## Start
 * Run local mail server
+
 This is optional if you're using external mail services.
 
 ```

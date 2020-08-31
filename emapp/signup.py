@@ -40,8 +40,6 @@ class Signup(Resource):
                 "failed to send signup (%s for %s(id=%d)) notification: %s",
                 email, event['name'], event_id, e)
             raise ErrSignupMailFailure
-        # Location header is not set since
-        # there's no endpoint that indicates the signup status.
         return {}, 201, {
             'Location': url_for('signup_emails_list', event_id=event_id)}
 
