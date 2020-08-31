@@ -26,7 +26,12 @@ This is optional if you're using external mail services.
 python3 -m aiosmtpd -n -l 127.0.0.1:1025
 ```
 
-* Run api server
+* Test
+```
+python3 -m pytest -v
+```
+
+* Run API server
 ```
 . venv/bin/activate
 export FLASK_APP=emapp
